@@ -2,6 +2,8 @@
 
 A responsive, front-end-only advisor booking demo built with semantic HTML, CSS, and vanilla JavaScript ES modules. User accounts, appointments, availability, theme preference, notifications, and feedback are stored in the browser's `localStorage`; there is no backend.
 
+**Live demo:** [https://lpuadvisorhub.vercel.app](https://lpuadvisorhub.vercel.app)
+
 ## Run it
 
 The recommended way is the included Node.js static server. It has no package dependencies and serves ES modules with the correct MIME type:
@@ -57,6 +59,7 @@ js/
   ui.js
 server.cjs
 package.json
+vercel.json
 ```
 
 `app.js` renders the shared navigation/footer and page views. The other JavaScript modules isolate local data, session/authentication, theme selection, calendar and slot logic, reminders, and UI notifications/dialogs. The app stores all site data in the `lpu-advisorhub-v1` localStorage record and the current signed-in user in `lpu-advisorhub-session`.
@@ -69,3 +72,4 @@ package.json
 - Teacher registrations start unapproved; an admin can approve the listing and manage users, appointments, and moderated feedback.
 - The calendar supports month and week views, and session details can be downloaded as an `.ics` file.
 - Browser notifications are optional. The app also shows in-app reminders for confirmed sessions within 24 hours and one hour.
+- The production site is hosted on Vercel and connected to the `main` branch of this GitHub repository.
